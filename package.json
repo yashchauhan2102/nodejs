@@ -1,0 +1,23 @@
+{
+  "name": "node-project",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/yashchauhan2102/nodejs#readme",
+  "bugs": {
+    "url": "https://github.com/yashchauhan2102/nodejs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashchauhan2102/nodejs.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
