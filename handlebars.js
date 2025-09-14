@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 // Route to display all products
 app.get('/products', (req, res) => {
-  const data = JSON.parse(fs.readFileSync('products.json', 'utf-8'));
+  const data = JSON.parse(fs.readFileSync('./data/products.json', 'utf-8'));
   res.render('products', { title: 'Products List', products: data });
 });
 

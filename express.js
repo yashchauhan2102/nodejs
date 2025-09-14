@@ -8,11 +8,11 @@ const port = 4200;
 app.use(express.json());
 
 function readProducts() {
-  return JSON.parse(fs.readFileSync('products.json', 'utf-8'));
+  return JSON.parse(fs.readFileSync('./data/products.json', 'utf-8'));
 }
 
 function writeProducts(data) {
-  fs.writeFileSync('products.json', JSON.stringify(data, null, 2));
+  fs.writeFileSync('./data/products.json', JSON.stringify(data, null, 2));
 }
 
 // Default route
