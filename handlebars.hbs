@@ -1,0 +1,26 @@
+const express = require('express');
+const exphbs = require('express-handlebars');
+const fs = require('fs');
+
+const app = express();
+const port = 8080;
+
+// Setup Handlebars
+app.engine('hbs', exphbs.engine({ extname: '.hbs' }));
+app.set('view engine', 'hbs');
+app.set('views', './views');
+
+//Default
+app.get('/', (req, res) => {
+  res.render('home', { title:'Home', heading: 'Welcome to Express Handlebars Home Page'});
+});
+
+// Route to display all products
+app.get('/products', (req, res) => {
+  const data = JSON.parse(fs.readFileSync('products.json', 'utf-8'));
+  res.render('products', { title: 'Products List', products: data });
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
